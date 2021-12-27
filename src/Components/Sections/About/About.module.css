@@ -1,0 +1,94 @@
+.about {
+    background: url("../../../assets/img/about/about_desktop.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+}
+.about:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background 0.5s ease-in-out;
+}
+.opacity:before {
+    background: rgba(0, 0, 0, 0);
+}
+.hide_container {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.about_img,
+.about_img_phone {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.about_img img,
+.about_img_phone img {
+    max-width: 100%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+.about_img::before,
+.about_img_phone::before {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    content: "";
+    border-left: 3px solid #cda45e;
+    border-top: 3px solid #cda45e;
+    transition: 0.5s;
+}
+.about_img::after,
+.about_img_phone::after {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    content: "";
+    border-right: 3px solid #cda45e;
+    border-bottom: 3px solid #cda45e;
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 769px) {
+    .about_img:hover {
+        transform: scale(1.03);
+    }
+    .about_img:hover::before {
+        left: 10px;
+        top: 10px;
+    }
+    .about_img:hover::after {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about {
+        background-image: url("../../../assets/img/about/about_phone.jpg");
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .about_img_phone:hover {
+        transform: scale(1.03);
+    }
+    .about_img_phone:hover::before {
+        left: 10px;
+        top: 10px;
+    }
+    .about_img_phone:hover::after {
+        right: 10px;
+        bottom: 10px;
+    }
+}

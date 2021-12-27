@@ -1,0 +1,101 @@
+.delivery_section{
+    overflow:hidden;
+}
+.card {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: var(--card-bg-color);
+    text-align: center;
+    height: 220px;
+    padding: 1rem 1.5rem;
+    margin: 20px;
+    border-radius: 3px;
+}
+.card a {
+    color: #fff;
+}
+
+.card:hover {
+    background: #cda45e;
+    border: 1px bsolid #cda45e;
+    -webkit-transform: ease-in-out 1.5s;
+    transform: ease-in-out 1.5s;
+    box-shadow: 10px 15px 30px rgb(0 0 0 / 18%);
+    transition: all 0.5s ease-in-out;
+}
+
+.card a {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.card h5 {
+    font-size: 16px;
+}
+.card h5 svg {
+    font-size: 16px;
+    color: #cda45e;
+}
+
+.card h6 {
+    font-size: 15px;
+}
+.card .description {
+    font-size: 13px;
+    font-family: sans-serif;
+    padding-top: 1rem;
+    height:80px;
+    overflow-y: auto;
+}
+.card .description::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.card .description::-webkit-scrollbar-track {
+    background: none !important;
+}
+
+/* Handle */
+.card .description::-webkit-scrollbar-thumb {
+    background: rgba(45, 41, 34);
+}
+.card:hover.card .description::-webkit-scrollbar-thumb {
+    background: rgba(213, 179, 121) !important;
+}
+.card:hover.card h5 svg {
+    color: #ffff !important;
+}
+
+.rating {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+@media screen and (min-width: 1200px) {
+    .card .description {
+        font-size: 12px;
+        padding-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        background-color: var(--card-bg-color);
+        padding: 21px 20px 20px 32px;
+        margin: 10px;
+    }
+    .card a {
+        font-size: 1.2rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .card h5 {
+        font-size: 1rem;
+    }
+    .card h6 {
+        font-size: 1rem;
+    }
+    .card .description {
+        padding-top: 0.2rem;
+        font-size: 0.8rem;
+    }
+}

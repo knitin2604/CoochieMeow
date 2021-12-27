@@ -1,0 +1,137 @@
+.tab_btn {
+    list-style: none;
+    border-right: 2px solid var(--font-color);
+}
+.tab_btn li {
+    margin: 0.7rem 0rem;
+    color: var(--white-color);
+    padding: 0.7rem 0rem;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tab_btn li.active {
+    background-color: var(--font-color) !important;
+    color: var(--white-color) !important;
+}
+.tab_btn li.active:hover{
+    color: var(--white-color) !important;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    animation: fade-in 1.5s ease-in-out;
+}
+.content {
+    margin: 1rem 1rem;
+}
+.description{
+    overflow-y: auto;
+    height: 210px;
+    padding-right: 15px;
+    text-align: justify;
+}
+.content h3 {
+    padding-bottom: 1rem;
+}
+.content p {
+    color: #aaa;
+    font-size: 1rem;
+}
+.content p span {
+    font-family: sans-serif !important;
+}
+.image img {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    animation: fade-in 1.3s ease-in-out;
+}
+.description::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+.description::-webkit-scrollbar-track {
+    background: none !important;
+}
+
+/* Handle */
+.description::-webkit-scrollbar-thumb {
+    background: rgba(31, 29, 24);
+}
+/* animation */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+@media screen and (max-width: 991px) {
+    .tab_btn {
+        display: flex;
+        justify-content: space-between;
+        border-right: none;
+        padding: 0rem 0rem;
+    }
+    .tab_btn li {
+        padding: 0.6rem 1rem;
+    }
+    .wrapper {
+        display: block;
+    }
+    .image img {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .tab_btn {
+        display: -webkit-box;
+        max-width: 693px;
+        overflow-x: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        scroll-behavior: smooth;
+    }
+    .tab_btn li {
+        margin: 0.7rem 0rem;
+        color: var(--white-color);
+        padding: 0.7rem 1rem;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .tab_btn::-webkit-scrollbar {
+        display: none;
+    }
+    .tab_btn {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .image img {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        animation: fade-in 1.3s ease-in-out;
+    }
+}

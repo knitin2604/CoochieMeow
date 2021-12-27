@@ -1,0 +1,75 @@
+/* section title animation */
+.section_title {
+  display: inline-block;
+  position: relative;
+  animation: zoom-in-zoom-out 1s ease-out;
+}
+.zoom-in-zoom-out {
+  position: relative;
+  animation: zoom-in-zoom-out 1s ease-in-out;
+}
+
+.delay-3 {
+  -webkit-animation-delay: 100ms !important;
+  animation-delay: 100ms !important;
+}
+.delay-5 {
+  -webkit-animation-delay: 200ms !important;
+  animation-delay: 200ms !important;
+}
+.delay-7 {
+  -webkit-animation-delay: 300ms !important;
+  animation-delay: 300ms !important;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.fade-up {
+  position: relative;
+  animation: fade-up 1s ease-in-out;
+}
+@keyframes fade-up {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.card-animation {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: animation-card;
+  animation-name: animation-card;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@keyframes animation-card {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    -moz-transform: scale3d(0.3, 0.3, 0.3);
+    -ms-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}

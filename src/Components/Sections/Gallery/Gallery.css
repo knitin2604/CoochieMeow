@@ -1,0 +1,75 @@
+.fslightbox-source {
+  width: 90vw !important;
+  min-height: 750px !important;
+  height: auto !important;
+  /* width: auto !important; */
+}
+
+.ReactModal__Overlay {
+  background: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%) !important;
+  z-index: 99999;
+}
+
+.ReactModal__Content {
+  background: linear-gradient(rgba(30, 30, 30, 0), #000 1810%) !important;
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  inset: unset !important;
+}
+
+.btn-close {
+  font-size: 20px;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.img-wrapper-delay {
+  animation: fadeIn;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@media (max-width: 990px) {
+  .ReactModal__Content {
+    padding: 10px !important;
+  }
+  .btn-close {
+    display: none;
+  }
+}
+
+/* button style */
+.btn:hover{
+  color: #cda45e;
+}
+.btn{
+  color:blanchedalmond;
+  color: #ffff;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  font-weight:500;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-family: "Open Sans",sans-serif;
+}

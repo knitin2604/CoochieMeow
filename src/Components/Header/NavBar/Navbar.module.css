@@ -1,0 +1,141 @@
+#NavBar{
+    transition: top 0.7s;
+}
+.navbar_fixed {
+    position: fixed !important;
+    top: 0;
+    background: rgba(37, 36, 32, 0.9);
+    border-bottom: 1px solid #37332a;
+    opacity: 1;
+    z-index: 2000;
+    width: 100vw;
+}
+.navbar-nav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.navbar_brand {
+    color: var(--white-color);
+    font-size: 16px;
+    cursor: pointer;
+}
+.navbar_logo{
+   max-width: 50px; 
+   opacity: 0.8;
+   /* padding:4px; */
+}
+.sticky_navbar_brand {
+    color: var(--title-font-color);
+    font-size: 14px;
+    cursor: pointer;
+}
+.sticky_navbar_brand:hover {
+    color: var(--title-font-color);
+}
+.nav_item,
+.sticky_nav_item {
+    margin-left: 1.5rem;
+}
+.nav_item a {
+    color: var(--white-color) !important;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.1s ease-in-out;
+}
+.sticky_nav_item {
+    color: var(--title-font-color) !important;
+    cursor: pointer;
+}
+.sticky_nav_item a{
+    font-size: 14px;
+}
+.nav_item a:hover,
+.sticky_nav_item a:hover {
+    color: #d9ba85 !important;
+}
+.nav_item .active,
+.sticky_nav_item .active {
+    color: #d9ba85 !important;
+}
+
+/* Mobile device */
+.toggle_btn {
+    color: var(--title-font-color);
+    margin-left: auto;
+    display: none;
+}
+.m_navbar {
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+.modal_backdrop:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:100vh;
+  }
+.m_hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .toggle_btn {
+        display: block;
+    }
+    .modal_backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9000000000;
+        width: 100%;
+        opacity: 1;
+        height: auto !important;
+        background-color: none !important;
+    }
+    @keyframes modal {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .m_modal_content {
+        background-color: #37332aea;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #1d1c19;
+        margin: 10px;
+        height: auto;
+    }
+    .m_close_btn {
+        color: var(--title-font-color);
+        margin-left: auto;
+        font-size: 17px;
+    }
+    .m_nav_item {
+        list-style: none;
+        padding: 0.5rem 0rem;
+    }
+    .m_nav_item a {
+        color: var(--title-font-color);
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    .m_nav_item .active {
+        color: #d9ba85;
+    }
+    .navbar_nav {
+        display: none;
+    }
+}
